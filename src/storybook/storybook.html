@@ -1,0 +1,1812 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>JERA Storybook</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../assets/css/uikit.min.css" />
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/uikit.min.js"></script>
+  <script src="../assets/js/uikit-icons.min.js"></script>
+  <!-- Custtom CSS -->
+  <link rel="stylesheet" href="../../dist/css/icons.css" />
+  <link rel="stylesheet" href="../../dist/css/style.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/default.min.css">
+  
+
+</head>
+
+<body class="uk-light dark-body">
+  <!-- Top Header start -->
+  <div uk-sticky class="uk-active dark-header">
+    <div class="uk-container uk-container-expand">
+      <nav uk-navbar class="top-header">
+          <div class="uk-navbar-left">
+            <a href="#" id="uk-logo" class="uk-navbar-item uk-logo uk-padding-remove"><img data-src="../../src/assets/images/logo.svg" uk-img></a>
+          </div>
+          <div class="uk-navbar-right uk-margin-auto-left">
+            <h3 class="uk-text-capitalize mb-0">Storybook</h3>
+          </div>
+      </nav>
+    </div>
+  </div>
+  <!-- Header end -->
+
+  <!-- Main content -->
+  <div class="main-content no-sidebar">
+    <!-- Content start -->
+    <div id="content-section" class="content">
+      <div class="uk-container uk-container-expand pt-30 pb-30">
+         
+        <!-- main Tabs-->
+        <div class="c-tab-vertical">
+          <ul class="uk-tab uk-padding-small" data-uk-tab="{connect:'#my-id'}">
+            <li><a href="">Accordion</a></li>
+            <li><a href="">Button</a></li>
+            <li><a href="">Card</a></li>
+            <li><a href="">Header</a></li>
+            <li><a href="">Input</a></li>
+            <li><a href="">Date/Time-picker</a></li>
+            <li><a href="">Search</a></li>
+            <li><a href="">Select</a></li>
+            <li><a href="">Sidebar</a></li>
+            <li><a href="">Tabs</a></li>
+            <li><a href="">Typography</a></li>
+          </ul>
+          <ul id="my-id" class="uk-switcher">
+            <!-- Accordion start -->
+            <li>
+              <ul class="uk-tab" data-uk-tab="{connect:'#accordion'}">
+                <li><a href="">Preview</a></li>
+                <li><a href="">Documents</a></li>
+              </ul>
+              <ul id="accordion" class="uk-switcher uk-margin ml-20">
+                <li>
+                  <div class="uk-overflow-auto">
+                    <h5>Accordion type 1</h5>
+                    <ul uk-accordion class="uk-accordion uk-accordion-without-border">
+                      <li class="uk-open">
+                        <a class="uk-accordion-title font-16" href="#"><span class="uk-text-bold">KS11</span><span class="uk-accordion-sub-header font-12">拡大する</span></a>
+                        <div class="uk-accordion-content mt-10 box-shadow-remove">
+                          <p class="font-12 color-grey-blue-90">Lorem ipsum dolor sit amet.</p>
+                        </div>
+                      </li>
+                    </ul>
+                    <pre>
+                      <code class="language-html">
+                        &lt;ul uk-accordion class="uk-accordion uk-accordion-without-border"&gt;
+                          &lt;li class="uk-open"&gt;
+                            &lt;a class="uk-accordion-title font-16" href="#"&gt;
+                              &lt;span class="uk-text-bold"&gt;KS11&lt;/span&gt;
+                              &lt;span class="uk-accordion-sub-header font-12"&gt;拡大する&lt;/span&gt;
+                            &lt;/a&gt;
+                            &lt;div class="uk-accordion-content mt-10 box-shadow-remove"&gt;
+                              &lt;p class="font-12 color-grey-blue-90"&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+                            &lt;/div&gt;
+                          &lt;/li&gt;
+                        &lt;/ul&gt;
+                      </code>
+                    </pre>
+                    <h5>Accordion type 2</h5>
+                    <ul uk-accordion class="uk-accordion uk-accordion-without-border">
+                      <li class="uk-open">
+                        <a class="uk-accordion-title font-16" href="#"><span class="uk-text-bold">KS11</span></a>
+                        <div class="uk-accordion-content mt-10">
+                          <p class="font-12 color-grey-blue-90">Lorem ipsum dolor sit amet.</p>
+                        </div>
+                      </li>
+                    </ul>
+                    <pre>
+                      <code class="language-html">
+                        &lt;ul uk-accordion class="uk-accordion uk-accordion-without-border"&gt;
+                          &lt;li class="uk-open"&gt;
+                            &lt;a class="uk-accordion-title font-16" href="#"&gt;
+                              &lt;span class="uk-text-bold"&gt;KS11&lt;/span&gt;
+                            &lt;/a&gt;
+                            &lt;div class="uk-accordion-content mt-10"&gt;
+                              &lt;p class="font-12 color-grey-blue-90"&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+                            &lt;/div&gt;
+                          &lt;/li&gt;
+                        &lt;/ul&gt;
+                      </code>
+                    </pre>
+                    <h5>Accordion type 3</h5>
+                    <ul uk-accordion class="uk-accordion uk-accordion-without-border uk-accordion-expand-left">
+                      <li class="uk-open">
+                        <a class="uk-accordion-title font-16" href="#"><span class="uk-text-bold">KS11</span></a>
+                        <div class="uk-accordion-content">
+                          <p class="font-12 color-grey-blue-90">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                      </li>
+                    </ul>
+                    <pre>
+                      <code class="language-html">
+                        &lt;ul uk-accordion class="uk-accordion uk-accordion-without-border uk-accordion-expand-lef"&gt;
+                          &lt;li class="uk-open"&gt;
+                            &lt;a class="uk-accordion-title font-16" href="#"&gt;
+                              &lt;span class="uk-text-bold"&gt;KS11&lt;/span&gt;
+                            &lt;/a&gt;
+                            &lt;div class="uk-accordion-content"&gt;
+                              &lt;p class="font-12 color-grey-blue-90"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+                            &lt;/div&gt;
+                          &lt;/li&gt;
+                        &lt;/ul&gt;
+                      </code>
+                    </pre>
+                  </div>
+                </li>
+                <li>
+                  <h5 class="mb-10">Implementation</h5>
+                  <p class="uk-margin-remove">To implement accordion add HTML from preview and "accordion.scss" for styling</p>
+
+                  <h5 class="mb-10">Overview</h5>
+                  <p class="uk-margin-remove">There are 3 types of accordion with different types of arrows, its positioning, with/without divider:</p>
+                  <img src="../../src/assets/images/accordion-types.png" alt="Accordion">
+
+                  <h5>Anatomy</h5>
+                  <img src="../../src/assets/images/accordion-anatomy.png" alt="Anatomy">
+                  <ol class="uk-margin-top">
+                    <li>Arrow used to expand/collapse accordion</li>
+                    <li>Accordion Title</li>
+                    <li>Container</li>
+                  </ol>
+
+                  <h5 class="mb-m30">Specs</h5>
+                  <img src="../../src/assets/images/accordion-specs.svg" alt="Specs" class="uk-width-1-1">
+                  <ul class="uk-margin-top">
+                    <li>Arrow size - 20 x 20</li>
+                    <li>Title - 16px bold</li>
+                    <li>Container inner spacing - 17px(top/bottom) and 18px(left/right)</li>
+                    <li>Space between arrow and title or arrow and subtext is 10px</li>
+                    <li>Space between title and content is 24px if divider is not added</li>
+                  </ul>
+                </li>
+              </ul>
+              
+
+              <ul class="uk-tab mt-30" data-uk-tab="{connect:'#inside-accordion'}">
+                <li><a href="">Props</a></li>
+                <li><a href="">Events</a></li>
+                <li><a href="">Tests</a></li>
+              </ul>
+              <ul id="inside-accordion" class="uk-switcher uk-margin ml-20">
+                <li>
+                  Props data
+                </li>
+                <li>
+                  Events data
+                </li>
+                <li>
+                  Tests data
+                </li>
+              </ul> 
+            </li>
+            <!-- Accordion ends -->
+
+            <!-- Buttons start -->
+            <li>
+              <ul class="uk-tab" data-uk-tab="{connect:'#buttons'}">
+                <li><a href="">Preview</a></li>
+                <li><a href="">Documents</a></li>
+              </ul>
+              <ul id="buttons" class="uk-switcher uk-margin ml-20">
+                <li>
+                  <div class="uk-overflow-auto">
+                    <p uk-margin>
+                      <a class="uk-button uk-button-default" href="#">Link</a>
+                      <button class="uk-button uk-button-default ml-5">Button</button>
+                      <button class="uk-button uk-button-default ml-5" disabled>Disabled</button>
+                    </p>
+                    <pre>
+                      <code class="language-html">
+                        &lt;a class="uk-button uk-button-default" href="#"&gt;Link&lt;/a&gt;
+                        &lt;button class="uk-button uk-button-default"&gt;Button&lt;/button&gt;
+                        &lt;button class="uk-button uk-button-default" disabled&gt;Disabled&lt;/button&gt;
+                      </code>
+                    </pre>
+                    <h6>Style</h6>
+                    <p uk-margin>
+                      <button class="uk-button uk-button-default">Default</button>
+                      <button class="uk-button uk-button-primary ml-5">Primary</button>
+                      <button class="uk-button uk-button-grey ml-5">Grey</button>
+                      <button class="uk-button uk-button-danger ml-5">Danger</button>
+                      <button class="uk-button uk-button-success ml-5">Success</button>
+                      <button class="uk-button uk-button-orange ml-5">Feedback</button>
+                      <button class="uk-button uk-button-text ml-5">Text</button>
+                      <button class="uk-button uk-button-link ml-5">Link</button>
+                    </p>
+                    <pre>
+                      <code class="language-html">
+                        &lt;button class="uk-button uk-button-default"&gt;Default&lt;/button&gt;
+                        &lt;button class="uk-button uk-button-primary"&gt;Primary&lt;/button&gt;
+                        &lt;button class="uk-button uk-button-grey"&gt;Grey&lt;/button&gt;
+                        &lt;button class="uk-button uk-button-danger"&gt;Danger&lt;/button&gt;
+                        &lt;button class="uk-button uk-button-success"&gt;Success&lt;/button&gt;
+                        &lt;button class="uk-button uk-button-orange"&gt;Feedback&lt;/button&gt;
+                        &lt;button class="uk-button uk-button-text"&gt;Text&lt;/button&gt;
+                        &lt;button class="uk-button uk-button-link"&gt;Link&lt;/button&gt;
+                      </code>
+                    </pre>
+                    <h6>Size</h6>
+                    <p uk-margin>
+                      <button class="uk-button uk-button-default uk-button-small">Small button</button>
+                    </p>
+                    <pre>
+                      <code class="language-html">
+                        &lt;button class="uk-button uk-button-default uk-button-small"&gt;Small button&lt;/button&gt;
+                      </code>
+                    </pre>
+                    <p uk-margin>
+                      <button class="uk-button uk-button-default">Default button</button>
+                    </p>
+                    <pre>
+                      <code class="language-html">
+                        &lt;button class="uk-button uk-button-default"&gt;Default button&lt;/button&gt;
+                      </code>
+                    </pre>
+                    <p uk-margin>
+                      <button class="uk-button uk-button-default uk-button-large">Large button</button>
+                    </p>
+                    <pre>
+                      <code class="language-html">                        
+                        &lt;button class="uk-button uk-button-default uk-button-large"&gt;Large button&lt;/button&gt;
+                      </code>
+                    </pre>
+                    <h6>With Icon</h6>
+                    <p uk-margin>
+                      <button class="uk-button uk-button-default"><i class="jera-add-circle icn-20 mr-8"></i>Button</button>
+                    </p>
+                    <pre>
+                      <code class="language-html">
+                        &lt;button class="uk-button uk-button-default"&gt;&lt;i class="jera-add-circle icn-20 mr-8"&gt;&lt;/i&gt;Button&lt;/button&gt;
+                      </code>
+                    </pre>
+                    <h6>Group</h6>
+                    <div class="uk-margin-small">
+                      <div class="uk-button-group">
+                        <button class="uk-button uk-button-primary">Button</button>
+                        <button class="uk-button uk-button-default">Button</button>
+                        <button class="uk-button uk-button-danger">Button</button>
+                      </div>
+                    </div>
+                    <pre>
+                      <code class="language-html">
+                        &lt;div class="uk-button-group"&gt;
+                          &lt;button class="uk-button uk-button-primary"&gt;Button&lt;/button&gt;
+                          &lt;button class="uk-button uk-button-default"&gt;Button&lt;/button&gt;
+                          &lt;button class="uk-button uk-button-danger"&gt;Button&lt;/button&gt;
+                        &lt;/div&gt;
+                      </code>
+                    </pre>
+                    <h6>With Dropdown</h6>
+                    <div>
+                      <button class="uk-button uk-button-grey font-12"><i class="jera-tick-circle icn-16"></i>Click<i class="jera-arrow-down-1 ml-10 icn-14 uk-margin-remove-right"></i></button>
+                      <div class="uk-light uk-arrow uk-arrow-bottom-right min-w-160 pt-10 pb-10" uk-dropdown="pos:bottom-right; mode:click; offset:15;">
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                            <li><a href="#" class="font-12"><i class="jera-tick-circle icn-20 mr-5"></i>Link</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <pre>
+                      <code class="language-html">
+                        &lt;div&gt;
+                          &lt;button class="uk-button uk-button-grey font-12"&gt;&lt;i class="jera-tick-circle icn-16"&gt;&lt;/i&gt;Click&lt;i class="jera-arrow-down-1 ml-10 icn-14 uk-margin-remove-right"&gt;&lt;/i&gt;&lt;/button&gt;
+                          &lt;div class="uk-light uk-arrow uk-arrow-bottom-right min-w-160 pt-10 pb-10" uk-dropdown="pos:bottom-right; mode:click; offset:15;"&gt;
+                            &lt;ul class="uk-nav uk-navbar-dropdown-nav"&gt;
+                                &lt;li&gt;&lt;a href="#" class="font-12"&gt;&lt;i class="jera-tick-circle icn-20 mr-5"&gt;&lt;/i&gt;Link&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;                        
+                      </code>
+                    </pre>
+                  </div>
+                </li>
+                <li>
+                  <h5 class="mb-10">Implementation</h5>
+                  <p class="uk-margin-remove">To implement accordion add HTML from preview and "button.scss" for styling</p>
+                  <h5 class="mb-10">Overview</h5>
+                  <img src="../../src/assets/images/button-types.png" alt="Button">
+                  <p>There are 5 types of buttons</p>
+                  <ol>
+                    <li>Regular/Default button</li>
+                    <li>Button with icon</li>
+                    <li>Button with icon and dropdown</li>
+                    <li>Button without text</li>
+                    <li>Floating action button</li>
+                  </ol>
+
+                  <h5 class="mb-10">Button states</h5>
+                  <img src="../../src/assets/images/button-states.png" alt="Button States">
+                  <p>Here are the states of buttons</p>
+                  <ol>
+                    <li>Enabled</li>
+                    <li>Hovered</li>
+                    <li>Focused</li>
+                    <li>Pressed</li>
+                    <li>Disabled</li>
+                  </ol>
+
+                  <h5 class="mb-10">Button styles</h5>
+                  <img src="../../src/assets/images/button-styles.png" alt="Button styles">
+                  <p>Buttons have following 6 styles:</p>
+                  <ol>
+                    <li>Primary</li>
+                    <li>Warning</li>
+                    <li>Grey</li>
+                    <li>Default</li>
+                    <li>Success</li>
+                    <li>Danger</li>
+                  </ol>
+
+                  <h5 class="mb-10">Button size</h5>
+                  <img src="../../src/assets/images/button-size.png" alt="Button size">
+                  <ol>
+                    <li>Small (30px)</li>
+                    <li>Default (40px)</li>
+                    <li>Large (50px)</li>
+                  </ol>
+
+                  <h5 class="mb-10">Anatomy</h5>
+                  <img src="../../src/assets/images/button-anatomy.png" alt="Button Anatomy">
+                  <ol class="uk-margin-top">
+                    <li>Respective Text</li>
+                    <li>Container</li>
+                    <li>Icon (optional)</li>
+                  </ol>
+
+                  <h5 class="mb-10">Specs</h5>
+                  <img src="../../src/assets/images/button-specs.svg" alt="Button specs">
+                  <ul>
+                    <li>Container inner spacing - 10px(top/bottom) and 24px(left/right)</li>
+                    <li>Space between icon and text is 8px</li>
+                  </ul>
+                </li>
+              </ul>
+              
+
+              <ul class="uk-tab mt-30" data-uk-tab="{connect:'#inside-button'}">
+                <li><a href="">Props</a></li>
+                <li><a href="">Events</a></li>
+                <li><a href="">Tests</a></li>
+              </ul>
+              <ul id="inside-button" class="uk-switcher uk-margin ml-20">
+                <li>
+                  Props data
+                </li>
+                <li>
+                  Events data                  
+                </li>
+                <li>
+                  Tests data
+                </li>
+              </ul> 
+            </li>
+            <!-- Buttons ends -->
+
+            <!-- Card start -->
+            <li>
+              <ul class="uk-tab" data-uk-tab="{connect:'#card'}">
+                <li><a href="">Preview</a></li>
+                <li><a href="">Documents</a></li>
+              </ul>
+              <ul id="card" class="uk-switcher uk-margin ml-20">
+                <li>
+                  <div class="uk-card uk-width-1-2@m">
+                    <h3 class="uk-card-title color-white">Label</h3>
+                    <p class="uk-margin-remove">Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod tempo.</p>
+                  </div>
+                  <pre>
+                    <code class="language-html">
+                        &lt;div class="uk-card"&gt;
+                          &lt;h3 class="uk-card-title color-white"&gt;Label&lt;/h3&gt;
+                          &lt;p&gt;Lorem ipsum &lt;a href="#"&gt;dolor&lt;/a&gt; sit amet, consectetur adipiscing elit, sed do eiusmod tempo.&lt;/p&gt;
+                        &lt;/div&gt;
+                    </code>
+                  </pre>
+                </li>
+                <li>
+                  <h5 class="mb-10">Implementation</h5>
+                  <p class="uk-margin-remove">To implement Card add HTML from preview and "card.scss" for styling</p>
+
+                  <h5 class="mb-10">Overview</h5>
+                  <img src="../../src/assets/images/card.png" alt="Card">
+
+                  <h5>Anatomy</h5>
+                  <img src="../../src/assets/images/card-anatomy.png" alt="Card Anatomy">
+                  <ol class="uk-margin-top">
+                    <li>Label/Title</li>
+                    <li>Text</li>
+                    <li>Container</li>
+                  </ol>
+
+                  <h5 class="mb-30">Specs</h5>
+                  <img src="../../src/assets/images/card-specs.svg" alt="Card Specs">
+                  <ul class="uk-margin-top">
+                    <li>Label/Title size- 24px medium</li>
+                    <li>Text size- 16px regular</li>
+                    <li>Inner spacing- 20px(left/right/top/bottom)</li>
+                  </ul>
+                </li>
+              </ul>
+              
+
+              <ul class="uk-tab mt-30" data-uk-tab="{connect:'#inside-card'}">
+                <li><a href="">Props</a></li>
+                <li><a href="">Events</a></li>
+                <li><a href="">Tests</a></li>
+              </ul>
+              <ul id="inside-card" class="uk-switcher uk-margin ml-20">
+                <li>
+                  Props data
+                </li>
+                <li>
+                  Events data
+                </li>
+                <li>
+                  Tests data
+                </li>
+              </ul> 
+            </li>
+            <!-- Card ends -->
+
+            <!-- Header start -->
+            <li>
+              <ul class="uk-tab" data-uk-tab="{connect:'#header'}">
+                <li><a href="">Preview</a></li>
+                <li><a href="">Documents</a></li>
+              </ul>
+              <ul id="header" class="uk-switcher uk-margin ml-20">
+                <li>
+                  <h5>Header without sidebar</h5>
+                  <div uk-sticky class="uk-active dark-header">
+                    <div class="uk-container uk-container-expand">
+                      <nav uk-navbar class="top-header">
+                        <div class="uk-navbar-left">
+                          <a href="#" id="uk-logo" class="uk-navbar-item uk-logo uk-padding-remove"><img
+                              data-src="../../src/assets/images/logo.svg" width="" height="" alt="" uk-img></a>
+                        </div>
+                        <div class="uk-navbar-right">
+                          <ul class="uk-nav uk-nav-default mr-30">
+                            <li class="uk-active">
+                              <a href="#"><i class="jera-global font-20"></i><span
+                                  class="font-16 ml-5 for-w">Language</span><span
+                                  class="font-16 ml-5 for-m">Lan</span><i class="jera-arrow-down-1"></i></a>
+                              <div class="uk-light uk-arrow uk-arrow-bottom-right"
+                                uk-dropdown="pos:bottom-right; mode:click; offset:15;">
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                  <li><a href="#"><img data-src="../../src/assets/images/flag-japan.svg" width="20"
+                                        height="20" alt="" uk-img class="mr-5">Japanese</a></li>
+                                  <li><a href="#" class="disabled"><img
+                                        data-src="../../src/assets/images/flag-usa.svg" width="20" height="20"
+                                        alt="" uk-img class="mr-5">English</a></li>
+                                </ul>
+                              </div>
+                            </li>
+                          </ul>
+                          <ul class="uk-nav uk-nav-default">
+                            <li class="uk-active">
+                              <a href="#"><img data-src="../../src/assets/images/icn-user.svg" width="" height=""
+                                  alt="" uk-img class="icn-user"><span class="font-16 ml-5 top-m1 for-w">Aki
+                                  Suzuki</span><i class="jera-arrow-down-1"></i></a>
+                              <div class="uk-light uk-arrow uk-arrow-bottom-right"
+                                uk-dropdown="pos:bottom-right; mode:click; offset:15;">
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                  <li><a href="#"><i class="jera-profile-circle icn-18 mr-5"></i>Edit Profile</a></li>
+                                  <li><a href="#"><i class="jera-setting-2 icn-18 mr-5"></i>Settings</a></li>
+                                  <li><a href="#"><i class="jera-logout icn-18 mr-5"></i>Logout</a></li>
+                                </ul>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </nav>
+                    </div>
+                  </div>
+                  <pre>
+                    <code class="language-html">
+                      &lt;div uk-sticky class="uk-active dark-header"&gt;
+                        &lt;div class="uk-container uk-container-expand"&gt;
+                          &lt;nav uk-navbar class="top-header"&gt;
+                            &lt;div class="uk-navbar-left"&gt;
+                              &lt;a href="#" id="uk-logo" class="uk-navbar-item uk-logo uk-padding-remove"&gt;&lt;img
+                                  data-src="../../src/assets/images/logo.svg" width="" height="" alt="" uk-img&gt;&lt;/a&gt;
+                            &lt;/div&gt;
+                            &lt;div class="uk-navbar-right"&gt;
+                              &lt;ul class="uk-nav uk-nav-default mr-30"&gt;
+                                &lt;li class="uk-active"&gt;
+                                  &lt;a href="#"&gt;&lt;i class="jera-global font-20"&gt;&lt;/i&gt;&lt;span
+                                      class="font-16 ml-5 for-w"&gt;Language&lt;/span&gt;&lt;span
+                                      class="font-16 ml-5 for-m"&gt;Lan&lt;/span&gt;&lt;i class="jera-arrow-down-1"&gt;&lt;/i&gt;&lt;/a&gt;
+                                  &lt;div class="uk-light uk-arrow uk-arrow-bottom-right"
+                                    uk-dropdown="pos:bottom-right; mode:click; offset:15;"&gt;
+                                    &lt;ul class="uk-nav uk-navbar-dropdown-nav"&gt;
+                                      &lt;li&gt;&lt;a href="#"&gt;&lt;img data-src="../../src/assets/images/flag-japan.svg" width="20"
+                                            height="20" alt="" uk-img class="mr-5"&gt;Japanese&lt;/a&gt;&lt;/li&gt;
+                                      &lt;li&gt;&lt;a href="#" class="disabled"&gt;&lt;img
+                                            data-src="../../src/assets/images/flag-usa.svg" width="20" height="20"
+                                            alt="" uk-img class="mr-5"&gt;English&lt;/a&gt;&lt;/li&gt;
+                                    &lt;/ul&gt;
+                                  &lt;/div&gt;
+                                &lt;/li&gt;
+                              &lt;/ul&gt;
+                              &lt;ul class="uk-nav uk-nav-default"&gt;
+                                &lt;li class="uk-active"&gt;
+                                  &lt;a href="#"&gt;&lt;img data-src="../../src/assets/images/icn-user.svg" width="" height=""
+                                      alt="" uk-img class="icn-user"&gt;&lt;span class="font-16 ml-5 top-m1 for-w"&gt;Aki
+                                      Suzuki&lt;/span&gt;&lt;i class="jera-arrow-down-1"&gt;&lt;/i&gt;&lt;/a&gt;
+                                  &lt;div class="uk-light uk-arrow uk-arrow-bottom-right"
+                                    uk-dropdown="pos:bottom-right; mode:click; offset:15;"&gt;
+                                    &lt;ul class="uk-nav uk-navbar-dropdown-nav"&gt;
+                                      &lt;li&gt;&lt;a href="#"&gt;&lt;i class="jera-profile-circle icn-18 mr-5"&gt;&lt;/i&gt;Edit Profile&lt;/a&gt;&lt;/li&gt;
+                                      &lt;li&gt;&lt;a href="#"&gt;&lt;i class="jera-setting-2 icn-18 mr-5"&gt;&lt;/i&gt;Settings&lt;/a&gt;&lt;/li&gt;
+                                      &lt;li&gt;&lt;a href="#"&gt;&lt;i class="jera-logout icn-18 mr-5"&gt;&lt;/i&gt;Logout&lt;/a&gt;&lt;/li&gt;
+                                    &lt;/ul&gt;
+                                  &lt;/div&gt;
+                                &lt;/li&gt;
+                              &lt;/ul&gt;
+                            &lt;/div&gt;
+                          &lt;/nav&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    </code>
+                  </pre>
+
+                  <h5>Header with sidebar</h5>
+
+                  <div uk-sticky class="uk-active dark-header">
+                    <div class="uk-container uk-container-expand">
+                      <nav uk-navbar class="top-header">
+                        <div class="uk-navbar-left">
+                          <a href="#" id="uk-logo" class="uk-navbar-item uk-logo uk-padding-remove"><img data-src="../../src/assets/images/logo.svg" width="" height="" alt="" uk-img></a>
+                        </div>
+                        <a id="sidebar-toggle" class="uk-navbar-toggle uk-padding-remove ml-90 mt-20"><i
+                            class="jera jera-menu-arrow uk-text-primary"></i></a>
+                        <div class="uk-navbar-right">
+                          <ul class="uk-nav uk-nav-default mr-30">
+                            <li class="uk-active">
+                              <a href="#"><i class="jera-global font-20"></i><span class="font-16 color-grey-blue-95 ml-5 for-w">Language</span><span class="font-16 color-grey-blue-95 ml-5 for-m">Lan</span><i class="jera-arrow-down-1"></i></a>
+                              <div class="uk-light uk-arrow uk-arrow-bottom-right"
+                                uk-dropdown="pos:bottom-right; mode:click; offset:15;">
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                  <li><a href="#"><img data-src="../../src/assets/images/flag-japan.svg" width="20"
+                                        height="20" alt="" uk-img class="mr-5">Japanese</a></li>
+                                  <li><a href="#" class="disabled"><img data-src="../../src/assets/images/flag-usa.svg" width="20"  height="20" alt="" uk-img class="mr-5">English</a></li>
+                                </ul>
+                              </div>
+                            </li>
+                          </ul>
+                          <ul class="uk-nav uk-nav-default">
+                            <li class="uk-active">
+                              <a href="#"><img data-src="../../src/assets/images/icn-user.svg" width="" height=""
+                                  alt="" uk-img class="icn-user"><span class="font-16 ml-5 top-m1 for-w">Aki
+                                  Suzuki</span><i class="jera-arrow-down-1"></i></a>
+                              <div class="uk-light uk-arrow uk-arrow-bottom-right"
+                                uk-dropdown="pos:bottom-right; mode:click; offset:15;">
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                  <li><a href="#"><i class="jera-profile-circle icn-18 mr-5"></i>Edit Profile</a></li>
+                                  <li><a href="#"><i class="jera-setting-2 icn-18 mr-5"></i>Settings</a></li>
+                                  <li><a href="#"><i class="jera-logout icn-18 mr-5"></i>Logout</a></li>
+                                </ul>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </nav>
+                    </div>
+                  </div>
+
+                  <pre>
+                    <code>
+                      &lt;div uk-sticky class="uk-active dark-header"&gt;
+                        &lt;div class="uk-container uk-container-expand"&gt;
+                          &lt;nav uk-navbar class="top-header"&gt;
+                            &lt;div class="uk-navbar-left"&gt;
+                              &lt;a href="#" id="uk-logo" class="uk-navbar-item uk-logo uk-padding-remove"&gt;&lt;img data-src="../../src/assets/images/logo.svg" width="" height="" alt="" uk-img&gt;&lt;/a&gt;
+                            &lt;/div&gt;
+                            &lt;a id="sidebar-toggle" class="uk-navbar-toggle uk-padding-remove ml-90 mt-20"&gt;&lt;i
+                                class="jera jera-menu-arrow uk-text-primary"&gt;&lt;/i&gt;&lt;/a&gt;
+                            &lt;div class="uk-navbar-right"&gt;
+                              &lt;ul class="uk-nav uk-nav-default mr-30"&gt;
+                                &lt;li class="uk-active"&gt;
+                                  &lt;a href="#"&gt;&lt;i class="jera-global font-20"&gt;&lt;/i&gt;&lt;span class="font-16 color-grey-blue-95 ml-5 for-w"&gt;Language&lt;/span&gt;&lt;span class="font-16 color-grey-blue-95 ml-5 for-m"&gt;Lan&lt;/span&gt;&lt;i class="jera-arrow-down-1"&gt;&lt;/i&gt;&lt;/a&gt;
+                                  &lt;div class="uk-light uk-arrow uk-arrow-bottom-right"
+                                    uk-dropdown="pos:bottom-right; mode:click; offset:15;"&gt;
+                                    &lt;ul class="uk-nav uk-navbar-dropdown-nav"&gt;
+                                      &lt;li&gt;&lt;a href="#"&gt;&lt;img data-src="../../src/assets/images/flag-japan.svg" width="20"
+                                            height="20" alt="" uk-img class="mr-5"&gt;Japanese&lt;/a&gt;&lt;/li&gt;
+                                      &lt;li&gt;&lt;a href="#" class="disabled"&gt;&lt;img data-src="../../src/assets/images/flag-usa.svg" width="20"  height="20" alt="" uk-img class="mr-5"&gt;English&lt;/a&gt;&lt;/li&gt;
+                                    &lt;/ul&gt;
+                                  &lt;/div&gt;
+                                &lt;/li&gt;
+                              &lt;/ul&gt;
+                              &lt;ul class="uk-nav uk-nav-default"&gt;
+                                &lt;li class="uk-active"&gt;
+                                  &lt;a href="#"&gt;&lt;img data-src="../../src/assets/images/icn-user.svg" width="" height=""
+                                      alt="" uk-img class="icn-user"&gt;&lt;span class="font-16 ml-5 top-m1 for-w"&gt;Aki
+                                      Suzuki&lt;/span&gt;&lt;i class="jera-arrow-down-1"&gt;&lt;/i&gt;&lt;/a&gt;
+                                  &lt;div class="uk-light uk-arrow uk-arrow-bottom-right"
+                                    uk-dropdown="pos:bottom-right; mode:click; offset:15;"&gt;
+                                    &lt;ul class="uk-nav uk-navbar-dropdown-nav"&gt;
+                                      &lt;li&gt;&lt;a href="#"&gt;&lt;i class="jera-profile-circle icn-18 mr-5"&gt;&lt;/i&gt;Edit Profile&lt;/a&gt;&lt;/li&gt;
+                                      &lt;li&gt;&lt;a href="#"&gt;&lt;i class="jera-setting-2 icn-18 mr-5"&gt;&lt;/i&gt;Settings&lt;/a&gt;&lt;/li&gt;
+                                      &lt;li&gt;&lt;a href="#"&gt;&lt;i class="jera-logout icn-18 mr-5"&gt;&lt;/i&gt;Logout&lt;/a&gt;&lt;/li&gt;
+                                    &lt;/ul&gt;
+                                  &lt;/div&gt;
+                                &lt;/li&gt;
+                              &lt;/ul&gt;
+                            &lt;/div&gt;
+                          &lt;/nav&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    </code>
+                  </pre>
+                </li>
+                <li>
+                  <h5 class="mb-10">Implementation</h5>
+                  <p class="uk-margin-remove">To implement header add HTML from preview and "header.scss, dropdown.scss and tooltip.scss" for styling language and user profile dropdown</p>
+
+                  <h5 class="mb-10">Overview</h5>
+                  <img src="../../src/assets/images/header-types.png" alt="Header">
+                  <p class="uk-margin-remove">There are 2 types of header</p>
+                  <ol class="uk-margin-top">
+                    <li>Without sidebar</li>
+                    <li>With sidebar</li>
+                  </ol>
+
+                  <h5>Anatomy</h5>
+                  <img src="../../src/assets/images/header-anatomy.png" alt="Header Anatomy">
+                  <ol class="uk-margin-top">
+                    <li>Header container</li>
+                    <li>Logo</li>
+                    <li>Language dropdown(Multilingual)</li>
+                    <li>User profile and other links</li>
+                    <li>Sidebar toggle button</li>
+                  </ol>
+
+                  <h5 class="mb-30">Specs</h5>
+                  <img src="../../src/assets/images/header-specs.svg" alt="Specs" class="uk-width-1-1">
+                  <ul class="uk-margin-top">
+                    <li>Header height- 80px</li>
+                    <li>Header inner spacing - 20px(top/bottom) and 40px(left/right)</li>
+                    <li>Space between logo and sidebar toggle button is 91px</li>
+                    <li>Space between language dropdown and user profile is 30px</li>
+                    <li>Sidebar toggle button size- 40 x 40</li>
+                    <li>Language dropdown icon size- 20 x 20</li>
+                    <li>User profile icon size- 40 x 40</li>
+                    <li>Dropdown arrow size- 16 x 16</li>
+                    <li>Text size- 16px medium</li>
+                  </ul>
+                </li>
+              </ul>
+              
+
+              <ul class="uk-tab mt-30" data-uk-tab="{connect:'#inside-header'}">
+                <li><a href="">Props</a></li>
+                <li><a href="">Events</a></li>
+                <li><a href="">Tests</a></li>
+              </ul>
+              <ul id="inside-header" class="uk-switcher uk-margin ml-20">
+                <li>
+                  Props data
+                </li>
+                <li>
+                  Events data
+                </li>
+                <li>
+                  Tests data
+                </li>
+              </ul> 
+            </li>
+            <!-- Header ends -->
+
+            <!-- Input start -->
+            <li>
+              <ul class="uk-tab" data-uk-tab="{connect:'#input'}">
+                <li><a href="">Preview</a></li>
+                <li><a href="">Documents</a></li>
+              </ul>
+              <ul id="input" class="uk-switcher uk-margin ml-20">
+                <li>
+                  <div class="uk-overflow-auto">
+                    <h5>Input</h5>
+                    <div class="form-control uk-width-1-3@s">
+                      <label class="uk-custom-label"><span>Label</span></label>
+                      <input class="uk-input" type="text" placeholder="Placeholder">
+                    </div>
+                    <pre>
+                      <code class="language-html">
+                        &lt;div class="form-control"&gt;
+                          &lt;label class="uk-custom-label"&gt;
+                            &lt;span&gt;Label&lt;/span&gt;
+                          &lt;/label&gt;
+                          &lt;input class="uk-input" type="text" placeholder="Placeholder"&gt;
+                        &lt;/div&gt;
+                      </code>
+                    </pre>
+                    <!-- Input types -->
+                    <h5>Types</h5>
+                    <p class="uk-margin-remove">With Placeholder</p>
+                    <div class="form-control mb-30 uk-width-1-3@s">
+                      <label class="uk-custom-label"><span>Label</span></label>
+                      <input class="uk-input" type="text" placeholder="Placeholder">
+                    </div>
+                    <pre>
+                      <code class="language-html">
+                        &lt;div class="form-control"&gt;
+                          &lt;label class="uk-custom-label"&gt;
+                            &lt;span&gt;Label&lt;/span&gt;
+                          &lt;/label&gt;
+                          &lt;input class="uk-input" type="text" placeholder="Placeholder"&gt;
+                        &lt;/div&gt;
+                      </code>
+                    </pre>
+                    <p class="uk-margin-remove">With Value</p>
+                    <div class="form-control mb-30 uk-width-1-3@s">
+                      <label class="uk-custom-label"><span>Label</span></label>
+                      <input class="uk-input" type="text" value="Value">
+                    </div>
+                    <pre>
+                      <code class="language-html">
+                        &lt;div class="form-control"&gt;
+                          &lt;label class="uk-custom-label"&gt;
+                            &lt;span&gt;Label&lt;/span&gt;
+                          &lt;/label&gt;
+                          &lt;input class="uk-input" type="text" value="Value"&gt;
+                        &lt;/div&gt;
+                      </code>
+                    </pre>
+                    <p class="uk-margin-remove">Disabled</p>
+                    <div class="form-control mb-30 disabled uk-width-1-3@s">
+                      <label class="uk-custom-label"><span>Label</span></label>
+                      <input class="uk-input" type="text" value="Value" disabled>
+                    </div>
+                    <pre>
+                      <code class="language-html">
+                        &lt;div class="form-control disabled"&gt;
+                          &lt;label class="uk-custom-label"&gt;
+                            &lt;span&gt;Label&lt;/span&gt;
+                          &lt;/label&gt;
+                          &lt;input class="uk-input" type="text" value="Value" diasabled&gt;
+                        &lt;/div&gt;
+                      </code>
+                    </pre>
+                    <p class="uk-margin-remove">With Supporting text</p>
+                    <div class="form-control mb-30 uk-width-1-3@s">
+                      <label class="uk-custom-label"><span>Label</span></label>
+                      <input class="uk-input" type="text" value="Value">
+                      <p class="uk-align-right font-10 color-grey-blue-90 mt-3 uk-margin-remove-bottom uk-position-relative">
+                        Eg. 00:00 (24 hour format)</p>
+                    </div>
+                    <pre>
+                      <code class="language-html">
+                        &lt;div class="form-control"&gt;
+                          &lt;label class="uk-custom-label"&gt;
+                            &lt;span&gt;Label&lt;/span&gt;
+                          &lt;/label&gt;
+                          &lt;input class="uk-input" type="text" value="Value"&gt;
+                          &lt;p class="uk-align-right font-10 color-grey-blue-90 mt-3 uk-margin-remove-bottom uk-position-relative"&gt;Eg. 00:00 (24 hour format) &lt;/p&gt;
+                        &lt;/div&gt;
+                      </code>
+                    </pre>
+                    <p class="uk-margin-remove">Disabled with Supporting text</p>
+                    <div class="form-control mb-30 disabled uk-width-1-3@s">
+                      <label class="uk-custom-label"><span>Label</span></label>
+                      <input class="uk-input" type="text" value="Value" disabled>
+                      <p class="uk-align-right font-10 color-grey-blue-90 mt-3 uk-margin-remove-bottom uk-position-relative">
+                        Eg. 00:00 (24 hour format)</p>
+                    </div>
+                    <pre>
+                      <code class="language-html">
+                        &lt;div class="form-control disabled"&gt;
+                          &lt;label class="uk-custom-label"&gt;
+                            &lt;span&gt;Label&lt;/span&gt;
+                          &lt;/label&gt;
+                          &lt;input class="uk-input" type="text" value="Value" disabled&gt;
+                          &lt;p class="uk-align-right font-10 color-grey-blue-90 mt-3 uk-margin-remove-bottom uk-position-relative"&gt;Eg. 00:00 (24 hour format) &lt;/p&gt;
+                        &lt;/div&gt;
+                      </code>
+                    </pre>
+                    <p class="uk-margin-remove">Search input</p>
+                    <div class="form-control uk-field-with-icon with-label mb-30 uk-width-1-3@s">
+                      <label class="uk-custom-label"><span>Label</span></label>
+                      <input class="uk-input" type="text" value="Value">
+                      <button class="btn-icn"><i class="jera-search-normal-1"></i></button>
+                    </div>
+                    <pre>
+                      <code class="language-html">
+                        &lt;div class="form-control uk-field-with-icon with-label"&gt;
+                          &lt;label class="uk-custom-label"&gt;
+                            &lt;span&gt;Label&lt;/span&gt;
+                          &lt;/label&gt;
+                          &lt;input class="uk-input" type="text" value="Value"&gt;
+                          &lt;button class="btn-icn"&gt;&lt;i class="jera-search-normal-1"&gt;&lt;/i&gt;&lt;/button&gt;
+                        &lt;/div&gt;
+                      </code>
+                    </pre>
+                    <p class="mb-30">Input without label</p>
+                    <div class="form-control mb-30 uk-width-1-3@s">
+                      <input class="uk-input" type="text" value="Value">
+                    </div>
+                    <pre>
+                      <code class="language-html">
+                        &lt;div class="form-control"&gt;
+                          &lt;input class="uk-input" type="text" value="Value"&gt;
+                        &lt;/div&gt;
+                      </code>
+                    </pre>
+
+                    <!-- Input validation -->
+                    <h5>Input Validation</h5>
+                    <div class="form-control mb-30 uk-width-1-3@s">
+                      <label class="uk-custom-label"><span>Label</span></label>
+                      <input class="uk-input uk-form-error" type="text" value="Value">
+                      <p class="uk-align-right font-10 color-red-60 mt-3 uk-margin-remove-bottom uk-position-relative">
+                        Error goes here</p>
+                    </div>
+                    <pre>
+                      <code class="language-html">
+                        &lt;div class="form-control"&gt;
+                          &lt;label class="uk-custom-label"&gt;
+                            &lt;span&gt;Label&lt;/span&gt;
+                          &lt;/label&gt;
+                          &lt;input class="uk-input uk-form-error" type="text" value="Value"&gt;
+                          &lt;p class="uk-align-right font-10 color-red-60 mt-3 uk-margin-remove-bottom uk-position-relative"&gt;
+                            Error goes here&lt;/p&gt;
+                        &lt;/div&gt;
+                      </code>
+                    </pre>
+
+                    <!-- Input Updated/Edited -->
+                    <h5>Input Updated/Edited</h5>
+                    <div class="form-control mb-30 uk-width-1-3@s">
+                      <label class="uk-custom-label"><span>Label</span></label>
+                      <input class="uk-input uk-form-updated" type="text" value="Value">
+                    </div>
+                    <pre>
+                      <code class="language-html">
+                        &lt;div class="form-control"&gt;
+                          &lt;label class="uk-custom-label"&gt;
+                            &lt;span&gt;Label&lt;/span&gt;
+                          &lt;/label&gt;
+                          &lt;input class="uk-input uk-form-updated" type="text" value="Value"&gt;
+                        &lt;/div&gt;
+                      </code>
+                    </pre>
+
+                    <!-- Input Size -->
+                    <h5>Input Size</h5>
+                    <p class="uk-margin-remove">Small</p>
+                    <div class="form-control uk-input-small mb-30 uk-width-1-3@s">
+                      <label class="uk-custom-label"><span>Label</span></label>
+                      <input class="uk-input" type="text" value="Value">
+                    </div>
+                    <pre>
+                      <code class="language-html">
+                        &lt;div class="form-control uk-input-small"&gt;
+                          &lt;label class="uk-custom-label"&gt;
+                            &lt;span&gt;Label&lt;/span&gt;
+                          &lt;/label&gt;
+                          &lt;input class="uk-input" type="text" value="Value"&gt;
+                        &lt;/div&gt;
+                      </code>
+                    </pre>
+                    <p class="uk-margin-remove">Default</p>
+                    <div class="form-control mb-30 uk-width-1-3@s">
+                      <label class="uk-custom-label"><span>Label</span></label>
+                      <input class="uk-input" type="text" value="Value">
+                    </div>
+                    <pre>
+                      <code class="language-html">
+                        &lt;div class="form-control"&gt;
+                          &lt;label class="uk-custom-label"&gt;
+                            &lt;span&gt;Label&lt;/span&gt;
+                          &lt;/label&gt;
+                          &lt;input class="uk-input" type="text" value="Value"&gt;
+                        &lt;/div&gt;
+                      </code>
+                    </pre>
+                    <p class="uk-margin-remove">Large</p>
+                    <div class="form-control uk-input-large mb-30 uk-width-1-3@s">
+                      <label class="uk-custom-label"><span>Label</span></label>
+                      <input class="uk-input" type="text" value="Value">
+                    </div>
+                    <pre>
+                      <code class="language-html">
+                        &lt;div class="form-control uk-input-large"&gt;
+                          &lt;label class="uk-custom-label"&gt;
+                            &lt;span&gt;Label&lt;/span&gt;
+                          &lt;/label&gt;
+                          &lt;input class="uk-input" type="text" value="Value"&gt;
+                        &lt;/div&gt;
+                      </code>
+                    </pre>
+                  </div>
+                </li>
+                <li>
+                  <h5 class="mb-10">Implementation</h5>
+                  <p class="uk-margin-remove">To implement input add HTML from preview and "form-element.scss" styling</p>
+
+                  <h5 class="mb-10">Overview</h5>
+                  <img src="../../src/assets/images/input-types.png" alt="Input">
+                  <ol class="mt-30">
+                    <li>With placeholder</li>
+                    <li>With value options</li>
+                    <li>Updated/Edited value</li>
+                    <li>Disabled</li>
+                    <li>With supporting text</li>
+                    <li>Error validated</li>
+                    <li>With search</li>
+                    <li>Without Label</li>
+                  </ol>
+
+                  <h5 class="mb-10">Size</h5>
+                  <img src="../../src/assets/images/input-size.png" alt="Input size">
+                  <ol class="mt-30">
+                    <li>Small(30px)</li>
+                    <li>Default(40px)</li>
+                    <li>Large(50px)</li>
+                  </ol>
+
+                  <h5>Anatomy</h5>
+                  <img src="../../src/assets/images/input-anatomy.png" alt="Input Anatomy">
+                  <ol class="uk-margin-top">
+                    <li>Label</li>
+                    <li>Placeholder</li>
+                    <li>Container</li>
+                    <li>Value</li>
+                    <li>Supporting text</li>
+                    <li>Icon/button</li>
+                  </ol>
+
+                  <h5 class="mb-30">Specs</h5>
+                  <img src="../../src/assets/images/input-specs.svg" alt="Input Specs">
+                  <ul class="uk-margin-top">
+                    <li>Label size- 14px bold</li>
+                    <li>Text size- 14px regular</li>
+                    <li>Supporting text size- 10px regular</li>
+                    <li>Icon size- 20 x 20</li>
+                    <li>Height- 40px</li>
+                  </ul>
+                </li>
+              </ul>
+              
+
+              <ul class="uk-tab mt-30" data-uk-tab="{connect:'#inside-input'}">
+                <li><a href="">Props</a></li>
+                <li><a href="">Events</a></li>
+                <li><a href="">Tests</a></li>
+              </ul>
+              <ul id="inside-input" class="uk-switcher uk-margin ml-20">
+                <li>
+                  Props data
+                </li>
+                <li>
+                  Events data
+                </li>
+                <li>
+                  Tests data
+                </li>
+              </ul> 
+            </li>
+            <!-- Input ends -->
+
+            <!-- Datepicker start -->
+            <li>
+              <ul class="uk-tab" data-uk-tab="{connect:'#tabs'}">
+                <li><a href="">Preview</a></li>
+                <li><a href="">Documents</a></li>
+              </ul>
+              <ul id="tabs" class="uk-switcher uk-margin ml-20">
+                <li>
+                  <h5>Datepicker/Yearpicker/Monthpicker</h5>
+                  <div class="form-control uk-width-1-3">
+                    <label class="uk-custom-label">
+                      <span>Label</span>
+                    </label>
+                    <div class="uk-position-relative uk-field-with-icon">
+                      <input class="uk-input" type="text" placeholder="YYYY-MM-DD">
+                      <i class="jera-calendar-1 icn"></i>
+                    </div>
+                  </div>
+                  <pre>
+                    <code>
+                      &lt;div class="form-control"&gt;
+                        &lt;label class="uk-custom-label"&gt;
+                          &lt;span&gt;Label&lt;/span&gt;
+                        &lt;/label&gt;
+                        &lt;div class="uk-position-relative uk-field-with-icon"&gt;
+                          &lt;input class="uk-input" type="text" placeholder="YYYY-MM-DD"&gt;
+                          &lt;i class="jera-calendar-1 icn"&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    </code>
+                  </pre>
+                  <div class="form-control uk-input-icon-right uk-width-1-3">
+                    <label class="uk-custom-label"><span>作業日</span></label>
+                    <div class="uk-position-relative uk-field-with-icon">
+                      <input class="uk-input" type="text" value="2022-01-01">
+                      <i class="jera-calendar-1 icn"></i>
+                      <button class="uk-clear-date color-white"><i class="jera-close icn-20"></i></button>
+                    </div>
+                  </div>
+                  <pre>
+                    <code>
+                      &lt;div class="form-control uk-input-icon-right"&gt;
+                        &lt;label class="uk-custom-label"&gt;&lt;span&gt;作業日&lt;/span&gt;&lt;/label&gt;
+                        &lt;div class="uk-position-relative uk-field-with-icon"&gt;
+                          &lt;input class="uk-input" type="text" value="2022-01-01"&gt;
+                          &lt;i class="jera-calendar-1 icn"&gt;&lt;/i&gt;
+                          &lt;button class="uk-clear-date color-white"&gt;&lt;i class="jera-close icn-20"&gt;&lt;/i&gt;&lt;/button&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    </code>
+                  </pre>
+
+                  <h5>Date Timepicker/ Date Rangepicker</h5>
+                  <div class="form-control uk-width-1-3">
+                    <label class="uk-custom-label">
+                      <span>Label</span>
+                    </label>
+                    <div class="uk-position-relative uk-field-with-icon">
+                      <input class="uk-input" type="text" placeholder="YYYY-MM-DD  HH:MM">
+                      <i class="jera-calendar-time icn"></i>
+                    </div>
+                  </div>
+                  <pre>
+                    <code>
+                      &lt;div class="form-control"&gt;
+                        &lt;label class="uk-custom-label"&gt;
+                          &lt;span&gt;Label&lt;/span&gt;
+                        &lt;/label&gt;
+                        &lt;div class="uk-position-relative uk-field-with-icon"&gt;
+                          &lt;input class="uk-input" type="text" placeholder="YYYY-MM-DD  HH:MM"&gt;
+                          &lt;i class="jera-calendar-time icn"&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    </code>
+                  </pre>
+                  <div class="form-control uk-input-icon-right uk-width-1-3">
+                    <label class="uk-custom-label"><span>作業日</span></label>
+                    <div class="uk-position-relative uk-field-with-icon">
+                      <input class="uk-input" type="text" value="2022-01-01  00:00">
+                      <i class="jera-calendar-time icn"></i>
+                      <button class="uk-clear-date color-white"><i class="jera-close icn-20"></i></button>
+                    </div>
+                  </div>
+                  <pre>
+                    <code>
+                      &lt;div class="form-control uk-input-icon-right"&gt;
+                        &lt;label class="uk-custom-label"&gt;&lt;span&gt;作業日&lt;/span&gt;&lt;/label&gt;
+                        &lt;div class="uk-position-relative uk-field-with-icon"&gt;
+                          &lt;input class="uk-input" type="text" value="2022-01-01  00:00"&gt;
+                          &lt;i class="jera-calendar-time icn"&gt;&lt;/i&gt;
+                          &lt;button class="uk-clear-date color-white"&gt;&lt;i class="jera-close icn-20"&gt;&lt;/i&gt;&lt;/button&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    </code>
+                  </pre>
+
+                  <h5>Timepicker</h5>
+                  <div class="form-control uk-width-1-3">
+                    <label class="uk-custom-label">
+                      <span>Label</span>
+                    </label>
+                    <div class="uk-position-relative uk-field-with-icon">
+                      <input class="uk-input" type="text" placeholder="HH:MM">
+                      <i class="jera-clock icn"></i>
+                    </div>
+                  </div>
+                  <pre>
+                    <code>
+                      &lt;div class="form-control"&gt;
+                        &lt;label class="uk-custom-label"&gt;
+                          &lt;span&gt;Label&lt;/span&gt;
+                        &lt;/label&gt;
+                        &lt;div class="uk-position-relative uk-field-with-icon"&gt;
+                          &lt;input class="uk-input" type="text" placeholder="HH:MM"&gt;
+                          &lt;i class="jera-clock icn"&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    </code>
+                  </pre>
+
+                  <div class="form-control uk-input-icon-right uk-width-1-3">
+                    <label class="uk-custom-label"><span>作業日</span></label>
+                    <div class="uk-position-relative uk-field-with-icon">
+                      <input class="uk-input" type="text" value="00:00">
+                      <i class="jera-clock icn"></i>
+                      <button class="uk-clear-date color-white"><i class="jera-close icn-20"></i></button>
+                    </div>
+                  </div>
+                  <pre>
+                    <code>
+                      &lt;div class="form-control uk-input-icon-right"&gt;
+                        &lt;label class="uk-custom-label"&gt;&lt;span&gt;作業日&lt;/span&gt;&lt;/label&gt;
+                        &lt;div class="uk-position-relative uk-field-with-icon"&gt;
+                          &lt;input class="uk-input" type="text" value="00:00"&gt;
+                          &lt;i class="jera-clock icn"&gt;&lt;/i&gt;
+                          &lt;button class="uk-clear-date color-white"&gt;&lt;i class="jera-close icn-20"&gt;&lt;/i&gt;&lt;/button&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    </code>
+                  </pre>
+                </li>
+                <li>
+                  <h5 class="mb-10">Implementation</h5>
+                  <p class="uk-margin-remove">To implement Datepicker add Code from react library and "react-dateTime-picker.scss" for datepicker and "react-year-picker.scss" for yearpicker for styling and "clear-date.scss" for clear icon</p>
+
+                  <h5 class="mb-10">Overview</h5>
+                  <img src="../../src/assets/images/datepicker-types.png" alt="Datepicker">
+                  <p class="uk-margin-remove mt-30">Following are some of the datepicker used:</p>
+                  <ol class="mt-30">
+                    <li>Datepicker including time</li>
+                    <li>Date rangepicker</li>
+                    <li>Datepicker</li>
+                    <li>Monthpicker</li>
+                    <li>Yearpicker</li>
+                    <li>Timepicker</li>
+                  </ol>
+
+                  <h5>Anatomy</h5>
+                  <img src="../../src/assets/images/datepicker-anatomy.png" alt="Datepicker Anatomy">
+                  <div class="uk-flex">
+                    <div>
+                      <p>Date And Time Picker</p>
+                      <ol class="uk-margin-top">
+                        <li>Month Pagination</li>
+                        <li>Current Date</li>
+                        <li>Selected Date</li>
+                        <li>Container</li>
+                        <li>Day</li>
+                        <li>Month</li>
+                        <li>Title</li>
+                        <li>Selected Time</li>
+                      </ol>
+                    </div>
+                    <div class="ml-60">
+                      <p>Date Range Picker</p>
+                      <ol class="uk-margin-top">
+                        <li>Month Pagination</li>
+                        <li>Start Date</li>
+                        <li>Selected Range</li>
+                        <li>End Date</li>
+                        <li>Months</li>
+                        <li>Year</li>
+                        <li>Container</li>
+                      </ol>
+                    </div>
+                  </div>
+
+                  <h5 class="mb-30">Specs</h5>
+                  <p>Datepicker</p>
+                  <img src="../../src/assets/images/datepicker-specs.svg" alt="Datepicker Specs">
+
+                  <p>Date Rangepicker</p>
+                  <img src="../../src/assets/images/rangepicker-specs.svg" alt="Rangepicker Specs">
+
+                  <p>Datepicker including time</p>
+                  <img src="../../src/assets/images/date-timepicker-specs.svg" alt="Datetimepicker Specs">
+
+                  <p>Yearpicker</p>
+                  <img src="../../src/assets/images/yearpicker-specs.svg" alt="Yearpicker Specs">
+
+                  <p>Monthpicker</p>
+                  <img src="../../src/assets/images/monthpicker-specs.svg" alt="Monthpicker Specs">
+                </li>
+              </ul>
+              
+
+              <ul class="uk-tab mt-30" data-uk-tab="{connect:'#inside-datepicker'}">
+                <li><a href="">Props</a></li>
+                <li><a href="">Events</a></li>
+                <li><a href="">Tests</a></li>
+              </ul>
+              <ul id="inside-datepicker" class="uk-switcher uk-margin ml-20">
+                <li>
+                  Props data
+                </li>
+                <li>
+                  Events data
+                </li>
+                <li>
+                  Tests data
+                </li>
+              </ul> 
+            </li>
+            <!-- Datepicker ends -->
+
+            <!-- Search start -->
+            <li>
+              <ul class="uk-tab" data-uk-tab="{connect:'#search'}">
+                <li><a href="">Preview</a></li>
+                <li><a href="">Documents</a></li>
+              </ul>
+              <ul id="search" class="uk-switcher uk-margin ml-20">
+                <li>
+                  <h6>Search with leading icon</h6>
+                  <div class="uk-inline uk-search-input uk-width-1-3">
+                    <input class="uk-input" type="text" placeholder="Search">
+                    <span class="uk-form-icon jera-search-normal-1 color-white"></span>
+                  </div>
+
+                  <pre>
+                    <code>
+                      &lt;div class="uk-inline uk-search-input"&gt;
+                        &lt;input class="uk-input" type="text" placeholder="Search"&gt;
+                        &lt;span class="uk-form-icon jera-search-normal-1 color-white"&gt;&lt;/span&gt;
+                      &lt;/div&gt;
+                    </code>
+                  </pre>
+
+                  <h6>Search with trailing icon</h6>
+                  <div class="form-control uk-field-with-icon uk-width-1-3">
+                    <input class="uk-input" type="text" placeholder="Search">
+                    <button class="btn-icn"><i class="jera-search-normal-1"></i></button>
+                  </div>
+                  <pre>
+                    <code>
+                      &lt;div class="form-control uk-field-with-icon"&gt;
+                        &lt;input class="uk-input" type="text" placeholder="Search"&gt;
+                        &lt;button class="btn-icn"&gt;&lt;i class="jera-search-normal-1"&gt;&lt;/i&gt;&lt;/button&gt;
+                      &lt;/div&gt;
+                    </code>
+                  </pre>
+                </li>
+                <li>
+                  <h5 class="mb-10">Implementation</h5>
+                  <p class="uk-margin-remove">To implement search add HTML from preview and "form-element.scss" for styling</p>
+
+                  <h5 class="mb-10">Overview</h5>
+                  <img src="../../src/assets/images/search-type.png" alt="Search">
+                  <ol class="mt-30">
+                    <li>Search with leading icon</li>
+                    <li>Search with trailing icon</li>
+                  </ol>
+
+                  <h5 class="mb-10">Size</h5>
+                  <img src="../../src/assets/images/search-size.png" alt="Search Size">
+                  <ol class="mt-30">
+                    <li>Default(40px)</li>
+                    <li>Large(50px)</li>
+                  </ol>
+
+                  <h5>Anatomy</h5>
+                  <img src="../../src/assets/images/search-anatomy.png" alt="Search Anatomy">
+                  <ol class="uk-margin-top">
+                    <li>Search container</li>
+                    <li>Leading/Trailing icon</li>
+                    <li>Input text</li>
+                  </ol>
+
+                  <h5 class="mb-30">Specs</h5>
+                  <img src="../../src/assets/images/search-specs.svg" alt="Search Specs">
+                  <ul class="uk-margin-top">
+                    <li>Search container height- 40px</li>
+                    <li>Text size- 16px regular</li>
+                    <li>Icon size- 20 x 20</li>
+                    <li>Space between leading icon and text is 5px</li>
+                  </ul>
+                </li>
+              </ul>
+              
+
+              <ul class="uk-tab mt-30" data-uk-tab="{connect:'#inside-search'}">
+                <li><a href="">Props</a></li>
+                <li><a href="">Events</a></li>
+                <li><a href="">Tests</a></li>
+              </ul>
+              <ul id="inside-search" class="uk-switcher uk-margin ml-20">
+                <li>
+                  Props data
+                </li>
+                <li>
+                  Events data
+                </li>
+                <li>
+                  Tests data
+                </li>
+              </ul> 
+            </li>
+            <!-- Search ends -->
+
+            <!-- Select start -->
+            <li>
+              <ul class="uk-tab" data-uk-tab="{connect:'#select'}">
+                <li><a href="">Preview</a></li>
+                <li><a href="">Documents</a></li>
+              </ul>
+              <ul id="select" class="uk-switcher uk-margin ml-20">
+                <li>
+                  <h6>Select</h6>
+                  <div class="form-control uk-width-1-3">
+                    <label class="uk-custom-label">
+                      <span>Label</span>
+                    </label>
+                    <select class="uk-select">
+                      <option>Value</option>
+                      <option>Value1</option>
+                    </select>
+                  </div>
+                  <pre>
+                    <code>
+                      &lt;div class="form-control"&gt;
+                        &lt;label class="uk-custom-label"&gt;
+                          &lt;span&gt;Label&lt;/span&gt;
+                        &lt;/label&gt;
+                        &lt;select class="uk-select"&gt;
+                          &lt;option&gt;Value&lt;/option&gt;
+                          &lt;option&gt;Value1&lt;/option&gt;
+                        &lt;/select&gt;
+                      &lt;/div&gt;
+                    </code>
+                  </pre>
+
+                  <h5>Types</h5>
+                  <h6>With supporting text</h6>
+                  <div class="form-control uk-width-1-3 mb-30">
+                    <label class="uk-custom-label">
+                      <span>Label</span>
+                    </label>
+                    <select class="uk-select">
+                      <option>Value</option>
+                      <option>Value1</option>
+                    </select>
+                    <p class="uk-align-right font-10 color-grey-blue-90 mt-3 uk-margin-remove-bottom uk-position-relative">Eg. 00:00 (24 hour format) </p>
+                  </div>
+                  <pre>
+                    <code>
+                      &lt;div class="form-control"&gt;
+                        &lt;label class="uk-custom-label"&gt;
+                          &lt;span&gt;Label&lt;/span&gt;
+                        &lt;/label&gt;
+                        &lt;select class="uk-select"&gt;
+                          &lt;option&gt;Value&lt;/option&gt;
+                          &lt;option&gt;Value1&lt;/option&gt;
+                        &lt;/select&gt;
+                        &lt;p class="uk-align-right font-10 color-grey-blue-90 mt-3 uk-margin-remove-bottom uk-position-relative"&gt;Eg. 00:00 (24 hour format) &lt;/p&gt;
+                      &lt;/div&gt;
+                    </code>
+                  </pre>
+
+                  <h6>Disabled</h6>
+                  <div class="form-control disabled uk-width-1-3">
+                    <label class="uk-custom-label">
+                      <span>Label</span>
+                    </label>
+                    <select class="uk-select" disabled>
+                      <option>Value</option>
+                      <option>Value1</option>
+                    </select>
+                  </div>
+                  <pre>
+                    <code>
+                      &lt;div class="form-control disabled"&gt;
+                        &lt;label class="uk-custom-label"&gt;
+                          &lt;span&gt;Label&lt;/span&gt;
+                        &lt;/label&gt;
+                        &lt;select class="uk-select" disabled&gt;
+                          &lt;option&gt;Value&lt;/option&gt;
+                          &lt;option&gt;Value1&lt;/option&gt;
+                        &lt;/select&gt;
+                      &lt;/div&gt;
+                    </code>
+                  </pre>
+
+                  <h65>Error/ Validated</h6>
+                  <div class="form-control uk-width-1-3">
+                    <label class="uk-custom-label">
+                      <span>タスク タイプ<span class="color-red-60">*</span></span>
+                    </label>
+                    <select class="uk-select uk-search-input uk-form-error">
+                      <option>選択</option>
+                      <option>Select</option>
+                    </select>
+                  </div>
+                  <pre>
+                    <code>
+                      &lt;div class="form-control"gt;
+                        &lt;label class="uk-custom-label"gt;
+                          &lt;spangt;タスク タイプ&lt;span class="color-red-60"gt;*&lt;/spangt;&lt;/spangt;
+                        &lt;/labelgt;
+                        &lt;select class="uk-select uk-search-input uk-form-error"gt;
+                          &lt;optiongt;選択&lt;/optiongt;
+                          &lt;optiongt;Select&lt;/optiongt;
+                        &lt;/selectgt;
+                      &lt;/divgt;
+                    </code>
+                  </pre>
+
+                  <h5>Size</h5>
+                  <div class="form-control uk-width-1-3">
+                    <label class="uk-custom-label">
+                      <span>Label</span>
+                    </label>
+                    <select class="uk-select uk-select-large">
+                      <option>Value</option>
+                      <option>Value1</option>
+                    </select>
+                  </div>
+                  <pre>
+                    <code>
+                      &lt;div class="form-control"&gt;
+                        &lt;label class="uk-custom-label"&gt;
+                          &lt;span&gt;Label&lt;/span&gt;
+                        &lt;/label&gt;
+                        &lt;select class="uk-select uk-select-large"&gt;
+                          &lt;option&gt;Value&lt;/option&gt;
+                          &lt;option&gt;Value1&lt;/option&gt;
+                        &lt;/select&gt;
+                      &lt;/div&gt;
+                    </code>
+                  </pre>
+                </li>
+                <li>
+                  <h5 class="mb-10">Implementation</h5>
+                  <p class="uk-margin-remove">To implement Select add code from react library and "react-select.scss" for Select and "react-multiselect.scss" for Multiselect styling</p>
+
+                  <h5 class="mb-10">Overview</h5>
+                  <img src="../../src/assets/images/select-types.png" alt="Select">
+                  <ol class="mt-30">
+                    <li>With placeholder</li>
+                    <li>With value options</li>
+                    <li>With supporting text</li>
+                    <li>Error validated</li>
+                    <li>Multiselect</li>
+                    <li>Disabled</li>
+                    <li>Disabled with loader</li>
+                    <li>Select group</li>
+                  </ol>
+
+                  <h5 class="mb-10">Size</h5>
+                  <img src="../../src/assets/images/select-size.png" alt="Select size">
+                  <ol class="mt-30">
+                    <li>Default(40px)</li>
+                    <li>Large(50px)</li>
+                  </ol>
+
+                  <h5>Anatomy</h5>
+                  <img src="../../src/assets/images/select-anatomy.png" alt="Select Anatomy">
+                  <ol class="uk-margin-top">
+                    <li>Label</li>
+                    <li>Placeholder</li>
+                    <li>Dropdown arrow</li>
+                    <li>Value</li>
+                    <li>Supporting text</li>
+                    <li>Chips(Multiselect)</li>
+                  </ol>
+
+                  <h5 class="mb-30">Specs</h5>
+                  <img src="../../src/assets/images/select-specs.svg" alt="Select Specs">
+                  <ul class="uk-margin-top">
+                    <li>Label size- 14px bold</li>
+                    <li>Text size- 14px regular</li>
+                    <li>Supporting text size- 10px regular</li>
+                    <li>Arrow size- 20 x 20</li>
+                    <li>Height- 40px</li>
+                  </ul>
+                </li>
+              </ul>
+              
+
+              <ul class="uk-tab mt-30" data-uk-tab="{connect:'#inside-select'}">
+                <li><a href="">Props</a></li>
+                <li><a href="">Events</a></li>
+                <li><a href="">Tests</a></li>
+              </ul>
+              <ul id="inside-select" class="uk-switcher uk-margin ml-20">
+                <li>
+                  Props data
+                </li>
+                <li>
+                  Events data
+                </li>
+                <li>
+                  Tests data
+                </li>
+              </ul> 
+            </li>
+            <!-- Select ends -->
+
+            <!-- Sidebar start -->
+            <li>
+              <ul class="uk-tab" data-uk-tab="{connect:'#sidebar'}">
+                <li><a href="">Preview</a></li>
+                <li><a href="">Documents</a></li>
+              </ul>
+              <ul id="sidebar" class="uk-switcher uk-margin ml-20">
+                <li>
+                  <div id="sidebar" class="sidebar-left dark-header uk-position-relative top-0">
+                    <ul class="uk-nav uk-nav-default">
+                      <li class="dropdown-item">
+                        <a href="#" uk-tooltip="title: Dashboard; pos: right"><i class="jera-category"></i><span>Dashboard</span><i class="jera-arrow-down-1"></i></a>
+                        <div class="dropdown-list" >
+                          <ul class="uk-nav uk-navbar-dropdown-nav">
+                            <li><a href="#" uk-tooltip="title:Current Status; pos: right;"><i class="jera-graph"></i><span>Current Status</span></a></li>
+                            <li class="active"><a href="#" uk-tooltip="title:Annual Target; pos: right;"><i class="jera-graph"></i><span>Annual Target</span></a></li>
+                            <li><a href="#" uk-tooltip="title:Plant Lifecycle; pos: right;"><i class="jera-building"></i><span>Plant Lifecycle</span></a></li>
+                            <li><a href="#" uk-tooltip="title:Maintenance Lifecycle; pos: right;"><i class="jera-status"></i><span>Maintenance Lifecycle</span></a></li>
+                            <li><a href="#" uk-tooltip="title:Unplanned Outage; pos: right;"><i class="jera-status"></i><span>Unplanned Outage</span></a></li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="active"><a href="#" uk-tooltip="title: Template; pos: right;"><i class="jera-note-21"></i><span>Template</span></a></li>
+                    </ul>
+                  </div>
+
+                  <pre>
+                    <code>
+                      &lt;div id="sidebar" class="sidebar-left dark-header"&gt;
+                        &lt;ul class="uk-nav uk-nav-default"&gt;
+                          &lt;li class="dropdown-item"&gt;
+                            &lt;a href="#" uk-tooltip="title: Dashboard; pos: right"&gt;&lt;i class="jera-category"&gt;&lt;/i&gt;&lt;span&gt;Dashboard&lt;/span&gt;&lt;i class="jera-arrow-down-1"&gt;&lt;/i&gt;&lt;/a&gt;
+                            &lt;div class="dropdown-list" &gt;
+                              &lt;ul class="uk-nav uk-navbar-dropdown-nav"&gt;
+                                &lt;li&gt;&lt;a href="#" uk-tooltip="title:Current Status; pos: right;"&gt;&lt;i class="jera-graph"&gt;&lt;/i&gt;&lt;span&gt;Current Status&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                                &lt;li class="active"&gt;&lt;a href="#" uk-tooltip="title:Annual Target; pos: right;"&gt;&lt;i class="jera-graph"&gt;&lt;/i&gt;&lt;span&gt;Annual Target&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href="#" uk-tooltip="title:Plant Lifecycle; pos: right;"&gt;&lt;i class="jera-building"&gt;&lt;/i&gt;&lt;span&gt;Plant Lifecycle&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href="#" uk-tooltip="title:Maintenance Lifecycle; pos: right;"&gt;&lt;i class="jera-status"&gt;&lt;/i&gt;&lt;span&gt;Maintenance Lifecycle&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href="#" uk-tooltip="title:Unplanned Outage; pos: right;"&gt;&lt;i class="jera-status"&gt;&lt;/i&gt;&lt;span&gt;Unplanned Outage&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                              &lt;/ul&gt;
+                            &lt;/div&gt;
+                          &lt;/li&gt;
+                          &lt;li class="active"&gt;&lt;a href="#" uk-tooltip="title: Template; pos: right;"&gt;&lt;i class="jera-note-21"&gt;&lt;/i&gt;&lt;span&gt;Template&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                      &lt;/div&gt;
+                    </code>
+                  </pre>
+                </li>
+                <li>
+                  <h5 class="mb-10">Implementation</h5>
+                  <p class="uk-margin-remove">To implement Sidebar add HTML from preview and "sidebar.scss" for styling</p>
+
+                  <h5 class="mb-10">Overview</h5>
+                  <img src="../../src/assets/images/sidebar-types.png" alt="Sidebar">
+                  <ol class="mt-30">
+                    <li>Sidebar having only single menu</li>
+                    <li>Sidebar having parent and child menu</li>
+                  </ol>
+
+                  <h5 class="mb-10">States</h5>
+                  <img src="../../src/assets/images/sidebar-state.png" alt="Sidebar state">
+                  <p class="uk-margin-remove">Sidebar menu links have 5 different states</p>
+                  <ol class="mt-30">
+                    <li>Default single link</li>
+                    <li>Active single link</li>
+                    <li>Default parent menu link with child menu</li>
+                    <li>Active parent menu link with child menu</li>
+                    <li>Active child menu link</li>
+                  </ol>
+
+                  <h5>Anatomy</h5>
+                  <img src="../../src/assets/images/sidebar-anatomy.png" alt="Sidebar Anatomy">
+                  <ol class="uk-margin-top">
+                    <li>Active container(on hover or active state)</li>
+                    <li>Icon respective to the menu text</li>
+                    <li>Menu text</li>
+                  </ol>
+
+                  <h5 class="mb-30">Specs</h5>
+                  <img src="../../src/assets/images/sidebar-specs.svg" alt="Sidebar Specs">
+                  <ul class="uk-margin-top">
+                    <li>Each link height- 54px</li>
+                    <li>Icon size- 24 x 24</li>
+                    <li>Text size- 14px regular</li>
+                    <li>Menu link inner spacing - 15px(top/bottom) 20px(left/right)</li>
+                    <li>Space between icon and text is 20px</li>
+                  </ul>
+                </li>
+              </ul>
+              
+
+              <ul class="uk-tab mt-30" data-uk-tab="{connect:'#inside-sidebar'}">
+                <li><a href="">Props</a></li>
+                <li><a href="">Events</a></li>
+                <li><a href="">Tests</a></li>
+              </ul>
+              <ul id="inside-sidebar" class="uk-switcher uk-margin ml-20">
+                <li>
+                  Props data
+                </li>
+                <li>
+                  Events data
+                </li>
+                <li>
+                  Tests data
+                </li>
+              </ul> 
+            </li>
+            <!-- Sidebar ends -->
+
+            <!-- Tabs start -->
+            <li>
+              <ul class="uk-tab" data-uk-tab="{connect:'#tabs'}">
+                <li><a href="">Preview</a></li>
+                <li><a href="">Documents</a></li>
+              </ul>
+              <ul id="tabs" class="uk-switcher uk-margin ml-20">
+                <li>
+                  <ul uk-tab class="uk-tab">
+                    <li class="uk-active">
+                      <a href="" aria-expanded="false">Tab1</a>
+                    </li>
+                    <li>
+                      <a href="" aria-expanded="false">Tab2</a>
+                    </li>
+                    <li>
+                      <a href="" aria-expanded="true">Tab3</a>
+                    </li>
+                  </ul>
+
+                  <pre>
+                    <code>
+                      &lt;ul uk-tab class="uk-tab"&gt;
+                        &lt;li class="uk-active"&gt;
+                          &lt;a href="" aria-expanded="false"&gt;Tab1&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                          &lt;a href="" aria-expanded="false"&gt;Tab2&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                          &lt;a href="" aria-expanded="true"&gt;Tab3&lt;/a&gt;
+                        &lt;/li&gt;
+                      &lt;/ul&gt;
+                    </code>
+                  </pre>
+                </li>
+                <li>
+                  <h5 class="mb-10">Implementation</h5>
+                  <p class="uk-margin-remove">To implement Tabs add HTML from preview and "tabs.scss" for styling</p>
+
+                  <h5 class="mb-10">Overview</h5>
+                  <img src="../../src/assets/images/tabs.png" alt="Tabs">
+
+                  <h5 class="mb-10">States</h5>
+                  <img src="../../src/assets/images/tabs-state.png" alt="Tabs state">
+                  <ol class="mt-30">
+                    <li>Inactive/Unselected</li>
+                    <li>Active/Selected</li>
+                  </ol>
+
+                  <h5 class="mb-10">Size</h5>
+                  <img src="../../src/assets/images/tabs-size.png" alt="Tabs Size">
+                  <ol class="mt-30">
+                    <li>Default</li>
+                    <li>Large</li>
+                  </ol>
+
+                  <h5>Anatomy</h5>
+                  <img src="../../src/assets/images/tabs-anatomy.png" alt="Tabs Anatomy">
+                  <ol class="uk-margin-top">
+                    <li>Tabs container</li>
+                    <li>Text</li>
+                  </ol>
+
+                  <h5 class="mb-30">Specs</h5>
+                  <img src="../../src/assets/images/tabs-specs.svg" alt="Tabs Specs">
+                  <ul class="uk-margin-top">
+                    <li>Tab height- 40px</li>
+                    <li>Tab link inner spacing - 8px(top/bottom) 60px(left/right)</li>
+                    <li>Text size- 16px medium</li>
+                  </ul>
+                </li>
+              </ul>
+              
+
+              <ul class="uk-tab mt-30" data-uk-tab="{connect:'#inside-tabs'}">
+                <li><a href="">Props</a></li>
+                <li><a href="">Events</a></li>
+                <li><a href="">Tests</a></li>
+              </ul>
+              <ul id="inside-tabs" class="uk-switcher uk-margin ml-20">
+                <li>
+                  Props data
+                </li>
+                <li>
+                  Events data
+                </li>
+                <li>
+                  Tests data
+                </li>
+              </ul> 
+            </li>
+            <!-- Tabs ends -->
+
+            <!-- Typography start -->
+            <li>
+              <ul class="uk-tab" data-uk-tab="{connect:'#typography'}">
+                <li><a href="">Preview</a></li>
+                <li><a href="">Documents</a></li>
+              </ul>
+              <ul id="typography" class="uk-switcher uk-margin ml-20">
+                <li>
+                  <h1 class="color-white">Heading h1</h1>
+                  <h2 class="color-white">Heading h2</h2>
+                  <h3 class="color-white">Heading h3</h3>
+                  <h4 class="color-white">Heading h4</h4>
+                  <h5 class="color-white">Heading h5</h5>
+                  <h6 class="color-white">Heading h6</h6>
+
+                  <p>Text having font-size 16px</p>
+                  <p class="font-14">Text having font-size 14px</p>
+                  <p class="font-12">Text having font-size 12px</p>
+                  <p class="font-10">Text having font-size 10px</p>
+
+                  <p>Text<span class="uk-text-top font-10">superscript</span></p>
+                  <p>Text<span class="uk-text-bottom font-10">subscript</span></p>
+
+                  <pre>
+                    <code>
+                      &lt;h1&gt;Heading h1&lt;/h1&gt;
+                      &lt;h2&gt;Heading h2&lt;/h2&gt;
+                      &lt;h3&gt;Heading h3&lt;/h3&gt;
+                      &lt;h4&gt;Heading h4&lt;/h4&gt;
+                      &lt;h5&gt;Heading h5&lt;/h5&gt;
+                      &lt;h6&gt;Heading h6&lt;/h6&gt;
+
+                      &lt;p&gt;Text having font-size 16px&lt;/p&gt;
+                      &lt;p class="font-14"&gt;Text having font-size 14px&lt;/p&gt;
+                      &lt;p class="font-12"&gt;Text having font-size 12px&lt;/p&gt;
+                      &lt;p class="font-10"&gt;Text having font-size 10px&lt;/p&gt;
+
+                      &lt;p&gt;Text&lt;span class="uk-text-top font-10"&gt;superscript&lt;/span&gt;&lt;/p&gt;
+                      &lt;p&gt;Text&lt;span class="uk-text-bottom font-10"&gt;subscript&lt;/span&gt;&lt;/p&gt;
+                    </code>
+                  </pre>
+                </li>
+                <li>
+                  <h5>Size for all the heading and text</h5>
+                  <ul>
+                    <li>For h1 - 32px bold</li>
+                    <li>For h2 - 28px bold</li>
+                    <li>For h3 - 24px bold</li>
+                    <li>For h4 - 20px bold</li>
+                    <li>For h5 - 20px medium</li>
+                    <li>For h6 - 18px medium</li>
+                    <li>Regular text- 18px regular</li>
+                    <li>Regular text- 16px regular</li>
+                    <li>Supporting text- 14px regular</li>
+                    <li>Supporting text- 12px regular</li>
+                    <li>Supporting text- 10px regular</li>
+                    <li>Supporting text(subscript/superscript)- 8px regular</li>
+                  </ul>
+                </li>
+              </ul>
+              
+
+              <ul class="uk-tab mt-30" data-uk-tab="{connect:'#inside-typoraphy'}">
+                <li><a href="">Props</a></li>
+                <li><a href="">Events</a></li>
+                <li><a href="">Tests</a></li>
+              </ul>
+              <ul id="inside-typoraphy" class="uk-switcher uk-margin ml-20">
+                <li>
+                  Props data
+                </li>
+                <li>
+                  Events data
+                </li>
+                <li>
+                  Tests data
+                </li>
+              </ul> 
+            </li>
+            <!-- Typography ends -->
+          </ul>
+      </div>
+      </div>
+    </div>
+    <!-- Content end -->
+
+  <!-- Custom Javascript -->
+  <script src=" ../assets/js/custom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+  <script>
+  //hljs.highlightAll();
+  hljs.initHighlightingOnLoad();
+  </script>
+
+</body>
+
+</html>
